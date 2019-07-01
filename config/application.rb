@@ -32,3 +32,4 @@ module RailsDemo
       generate.system_tests false
     end
   end
+end
