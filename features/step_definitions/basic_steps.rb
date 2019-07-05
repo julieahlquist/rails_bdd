@@ -11,3 +11,11 @@ Given("the following articles exists") do |table|
         Article.create!(article)
     end
 end
+
+Given("I click {string}") do |element|
+    click_on element
+  end
+
+  When("I fill in {string} with {string}") do |string, string2|
+    pending # Write code here that turns the phrase above into concrete actions
+  end
