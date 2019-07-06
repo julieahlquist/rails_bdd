@@ -13,7 +13,8 @@ class ArticlesController < ApplicationController
       flash[:notice] = 'Article was successfully created.'
       redirect_to articles_path(article)
     else
-
+      flash[:alert] =  article.errors.full_messages.to_sentence
+      redirect_to new_article_path 
     end
   end
 
