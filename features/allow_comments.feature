@@ -15,8 +15,8 @@ Scenario: Successfully commented on an article
     And I should see "Learning Rails 5"
     And I should see "Excited about learning a new framework"
     And I should see "This is rubbish"
-    
+
   Scenario: Visitor doesn't enter a comment for the article [Sad Path]
-    When I fill in "Comment" with " "
+    When I fill in "Comment" with "abcd"
     And I click "Leave comment"
-    Then I should see "You need to write something"
+    Then I should see "This comment is too short"
