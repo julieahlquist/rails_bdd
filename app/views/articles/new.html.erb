@@ -1,14 +1,11 @@
-# <%= form_with model: @article, local: true do |form| %>
-#   <p>
-#     <%= form.label :title %><br>
-#     <%= form.text_field :title, placeholder: 'Title' %><br>
-#   </p>
-#   <p>
-#     <%= form.label :text %><br>
-#     <%= form.text_field :content, placeholder: 'Content' %><br>
-#   </p>
-#   <p>
-#     <%= form.submit value: "Create Article"%>
-#   </p>
+<%= form_with model: @article, local: true do |form| %>
 
-# <% end %>
+    <%= form.label :title %>
+    <%= form.text_field :title, placeholder: 'Title' %>
+
+    <%= form.label :content %>
+    <%= form.text_field :content, placeholder: 'Content' %>
+
+    <%= form.submit value: "Create Article" %>
+
+<% end %>
