@@ -4,8 +4,8 @@ Feature: Create articles
   I would like to be able to create articles
 
 Background:
-    Given I visit the "landing" page
-    When I click "New Article" link
+    Given I visit the site
+    And I click "New Article"
 
 Scenario: Successfully create an article
     # When I fill in "Title" with "Learning Rails 5"
