@@ -3,8 +3,8 @@ Then("I should be on {string} page") do |page|
     expect(current_path).to eq articles_path(article)
 end
 
-Then("I should see {string}") do |content|
-    expect(page).to have_content content
+Then("I should see {string}") do |text|
+    expect(page).to have_content text
 end
 
 # Then("I should be on {string}") do |page|
