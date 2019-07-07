@@ -5,7 +5,7 @@ Feature: Visitor can comment article
 
 Background:
     Given I visit the site
-    And I click "Read article"
+    And I click "Show"
     
 Scenario: Successfully commented on an article
     Then I should see "Learning Rails 5"
