@@ -5,9 +5,11 @@ Feature: Visitor can comment article
 
 Background:
     Given I visit the site
-    # And I click "Comment article"
-
+    And I click "Read article"
+    
 Scenario: Successfully commented on an article
+    Then I should see "Learning Rails 5"
+    And I should see "Excited about learning a new framework"
     When I fill in "Commenter" with "John Doe"
     And I fill in "Comment" with "This is fake news"
     And I click "Leave comment"

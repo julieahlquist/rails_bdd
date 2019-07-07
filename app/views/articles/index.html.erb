@@ -11,6 +11,7 @@
     <% @articles.each do |article| %>
         <td><%= article.title %></td>
         <td><%= article.content %></td>
+        <td><%= link_to 'Read article', articles_path(article) %></td>
     </tr>
   <% end %>
   
