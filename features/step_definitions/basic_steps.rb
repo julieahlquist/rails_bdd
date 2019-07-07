@@ -16,6 +16,6 @@ When("I fill in {string} with {string}") do |field, content|
     fill_in field, with: content
 end
 
-Given("I click {string}") do |element|
-    click_on element
+When("I click {string} link") do |string|
+    click_link
 end

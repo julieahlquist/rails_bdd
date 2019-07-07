@@ -11,7 +11,7 @@ Background:
     | Learn Rails 5        | Build awesome rails applications |
     
 Scenario: Successfully commented on an article
-    When I click "Show"
+    When I click "Show" link
     Then I should be on "Learning Rails 5"
     And I should see "Excited about learning a new framework"
     And I fill in "Commenter" with "John Doe"
