@@ -8,7 +8,7 @@ Background:
     And I click "Show"
     
 Scenario: Successfully commented on an article
-    Then I should see "Learning Rails 5"
+    When I should be on "Learning Rails 5"
     And I should see "Excited about learning a new framework"
     When I fill in "Commenter" with "John Doe"
     And I fill in "Comment" with "This is fake news"
