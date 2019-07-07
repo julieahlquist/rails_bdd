@@ -8,7 +8,7 @@ Background:
     # And I click "Comment article"
 
 Scenario: Successfully commented on an article
-    When I fill in "Commenter" with "John Doe"rai
+    When I fill in "Commenter" with "John Doe"
     And I fill in "Comment" with "This is fake news"
     And I click "Leave comment"
     Then I should see "John Doe"
