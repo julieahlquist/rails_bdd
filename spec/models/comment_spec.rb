@@ -6,10 +6,10 @@ RSpec.describe Comment, type: :model do
     it { is_expected.to have_db_column :article_id }
   end
 
-  # describe 'Validations' do
-  #   it { is_expected.to validate_presence_of :article }
-  #   it { is_expected.to validate_presence_of :content }
-  # end
+  describe 'Validations' do
+    it { is_expected.to validate_presence_of :body }
+    it { is_expected.to validate_presence_of :commenter }
+  end
 
   describe 'Factory' do
     it 'should have valid Factory' do
