@@ -5,10 +5,10 @@ Feature: Visitor can comment article
 
 Background:
     Given I visit the site
-    And I click "Comment article"
+    # And I click "Comment article"
 
 Scenario: Successfully commented on an article
-    When I fill in "Commenter" with "John Doe"
+    When I fill in "Commenter" with "John Doe"rai
     And I fill in "Comment" with "This is fake news"
     And I click "Leave comment"
     Then I should see "John Doe"
