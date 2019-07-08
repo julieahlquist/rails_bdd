@@ -1,6 +1,6 @@
 
 # Article Challenge
-### Week 2 - Rails weekend challenge
+## Week 2 - Rails weekend challenge
 
 ## Deployed website
 View [project 💻](http://jahlquist-aut.herokuapp.com/)<br>
