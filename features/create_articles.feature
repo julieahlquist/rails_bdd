@@ -5,7 +5,7 @@ Feature: Create articles
 
 Background:
     Given I visit the site
-    And I click "New Article"
+    And I click 'New Article'
 
 Scenario: Successfully create an article
     When I fill in "Title" with "Learning Rails 5"
