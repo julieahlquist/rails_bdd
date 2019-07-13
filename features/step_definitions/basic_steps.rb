@@ -19,3 +19,7 @@ end
 When("I click {string} link") do |string|
     click_link
 end
+
+Given("I visit {string} page") do |string|
+    visit new_user_session_path
+end
