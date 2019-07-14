@@ -1,7 +1,8 @@
 Feature: User can log in
-  As a visitor,
-  In order to access the forum
-  I would like to be able to login
+Feature: User can log in
+  As a user
+  In order to take part of the forum
+  I would like to be able to sign up
 
 Background:
     Given the following user exists
