@@ -9,17 +9,21 @@ Background:
     | title                | content                          |
     | A breaking news item | Some really breaking action      |
     | Learn Rails 5        | Build awesome rails applications |
-    
+    And the following user exists
+    |  email               | password |
+    |  johndoe@email.com   | abcde123 |
+    And I am logged in as 'johndoe@email.com'
+
 Scenario: Successfully commented on an article
     When I click Show link for "Learn Rails 5"
     Then I should be on "Learn Rails 5" page
-    And I fill in "article[commenter]" with "John Doe"
+    And I fill in "Commenter" with "John Doe"
     And I fill in "Body" with "This is fake news"
     When I click "Leave comment"
     Then I should see "John Doe"
     And I should see "This is fake news"
 
-  Scenario: Visitor doesn't enter a comment for the article [Sad Path]
-    When I fill in "Commenter" with "John Doe"
-    And I click "Leave comment"
-    Then I should see "You have to comment something"
+  # Scenario: Visitor doesn't enter a comment for the article [Sad Path]
+  #   When I fill in "Commenter" with "John Doe"
+  #   And I click "Leave comment"
+  #   Then I should see "You have to comment something"
