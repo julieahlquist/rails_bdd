@@ -11,7 +11,7 @@ Background:
     | Learn Rails 5        | Build awesome rails applications |
     
 Scenario: Successfully commented on an article
-    When I click "Show" link
+    When I click Show link for "Learn Rails 5"
     Then I should be on "Learn Rails 5" page
     And I fill in "Commenter" with "John Doe"
     And I fill in "Body" with "This is fake news"

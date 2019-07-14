@@ -23,3 +23,8 @@ end
 Given("I visit {string} page") do |string|
     visit new_user_session_path
 end
+
+When("I click Show link for {string}") do |article_title|
+    article_id = Article.find_by(title: article_title)
+    visit articles_path(article_id)
+end
