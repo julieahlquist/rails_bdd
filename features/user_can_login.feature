@@ -1,17 +1,11 @@
-Feature: List articles on the landing page
+Feature: User can sign up
   As a visitor,
-  In order to access the forum
-  I would like to be able to login
+  In order to take part of the forum
+  I would like to be able to sign up
 
 Background:
     Given I visit the site
-    And I click 'Log In'
+    And I click 'Sign Up'
 
-Scenario: User can successfully login
-    Then I should see "Log in"
-    And I should see "Email"
-    And I should see "Password"
-    When I fill in 'Email' with 'johndoe@email.com'
-    And I fill in 'Password' with 'abcde123'
-    And I click 'Log in'
-    Then I should be on "Learning Rails 5" page
+Scenario: User can successfully sign up
+    Then I should see "Sign up"
