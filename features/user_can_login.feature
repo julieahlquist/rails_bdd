@@ -1,6 +1,6 @@
 Feature: User can log in
   As a user
-  In order to access the forum
+  In order to write articles
   I would like to be able to log in
 
 Background:

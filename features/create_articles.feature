@@ -5,6 +5,11 @@ Feature: Create articles
 
 Background:
     Given I visit the site
+    And the following user exists
+    |  email               | password |
+    |  johndoe@email.com   | abcde123 |
+    When I visit the site
+    And I am logged in as 'johndoe@email.com'
     And I click 'New Article'
 
 Scenario: Successfully create an article
