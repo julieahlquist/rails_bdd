@@ -10,3 +10,7 @@ end
 Then("I should be on landing page") do
 	visit root_path
 end
+
+Then("I should be on sign_up page") do
+    visit new_user_registration_path
+end
