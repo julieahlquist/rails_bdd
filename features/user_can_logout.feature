@@ -1,12 +1,15 @@
-# Feature: User can log out
-#   As a visitor,
-#   In order to temporarily leave the forum
-#   I would like to be able to log out
+Feature: User can log out
+  As a visitor,
+  In order to temporarily leave the forum
+  I would like to be able to log out
 
-# Background:
-#     Given I visit the site
-#     And I click 'Log Out'
+Background:
+    Given I visit the site
+    And the following user exists
+    | email             | password  |
+    | johndoe@email.com | abcde123  |
+    And I am logged in as 'johndoe@email.com'
 
-# Scenario: User can successfully log out
-#     Then I should see "You have successfully signed out"
-#     And I should be on "Learning Rails 5" page
+Scenario: User can successfully log out
+    When I click 'Log out'
+    Then I should be on landing page
