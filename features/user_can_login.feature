@@ -14,4 +14,4 @@ Scenario: User can successfully login
     When I fill in 'Email' with 'johndoe@email.com'
     And I fill in 'Password' with 'abcde123'
     And I click 'Log in'
-    Then I should be on 'Landing' page
+    Then I should be on "Learning Rails 5" page
