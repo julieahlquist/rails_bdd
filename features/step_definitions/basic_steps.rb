@@ -47,3 +47,8 @@ Given("the following user exists") do |table|
 Given("I visit the sign_in page") do
     visit new_user_session_path
 end
+
+Given("I am logged in as {string}") do |email|
+    user = User.find_by(email: email)
+    login_as(user, scope: :user)
+end
