@@ -13,5 +13,5 @@ Scenario: User can successfully login
     And I should see "Password"
     When I fill in 'Email' with 'johndoe@email.com'
     And I fill in 'Password' with 'abcde123'
-    And I click 'Login'
+    And I click 'Log in'
     Then I should be on 'Landing' page

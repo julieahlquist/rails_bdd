@@ -28,3 +28,8 @@ When("I click Show link for {string}") do |article_title|
     article_id = Article.find_by(title: article_title)
     visit articles_path(article_id)
 end
+
+Given("I am logged in as {string}") do |email|
+    user = User.find_by(email: email)
+    login_as(user, scope: :user)
+end
