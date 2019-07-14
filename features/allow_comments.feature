@@ -19,7 +19,7 @@ Scenario: Successfully commented on an article
     Then I should be on "Learn Rails 5" page
     And I fill in "Commenter" with "John Doe"
     And I fill in "Body" with "This is fake news"
-    When I click "Leave comment"
+    When I click "Update Article"
     Then I should see "John Doe"
     And I should see "This is fake news"
 
