@@ -33,11 +33,6 @@ When("I click Show link for {string}") do |article_title|
     visit articles_path(article_id)
 end
 
-# Given("I am logged in as {string}") do |email|
-#     user = User.find_by(email: email)
-#     login_as(user, scope: :user)
-# end
-
 Given("the following user exists") do |table|
     table.hashes.each do |user|
       FactoryBot.create(:user, user)
