@@ -1,17 +1,16 @@
-Feature: List articles on the landing page
+Feature: User can log in
   As a visitor,
   In order to access the forum
   I would like to be able to login
 
 Background:
-    Given I visit the site
-    And I click 'Log In'
+    Given the following user exists
+    | email             | password  |
+    | johndoe@email.com | abcde123  |
+    And I visit the sign_in page
 
 Scenario: User can successfully login
-    Then I should see "Log in"
-    And I should see "Email"
-    And I should see "Password"
     When I fill in 'Email' with 'johndoe@email.com'
     And I fill in 'Password' with 'abcde123'
-    And I click 'Log in'
-    Then I should be on "Learning Rails 5" page
+    And I click 'Log in' button
+    And I should be on landing page

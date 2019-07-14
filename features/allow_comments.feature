@@ -13,7 +13,7 @@ Background:
 Scenario: Successfully commented on an article
     When I click Show link for "Learn Rails 5"
     Then I should be on "Learn Rails 5" page
-    And I fill in "Commenter" with "John Doe"
+    And I fill in "article[commenter]" with "John Doe"
     And I fill in "Body" with "This is fake news"
     When I click "Leave comment"
     Then I should see "John Doe"

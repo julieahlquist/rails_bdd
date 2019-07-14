@@ -20,6 +20,10 @@ When("I click {string} link") do |string|
     click_link
 end
 
+When("I click {string} button") do |string|
+    click_button string
+end
+
 Given("I visit {string} page") do |string|
     visit new_user_session_path
 end
@@ -29,7 +33,17 @@ When("I click Show link for {string}") do |article_title|
     visit articles_path(article_id)
 end
 
-Given("I am logged in as {string}") do |email|
-    user = User.find_by(email: email)
-    login_as(user, scope: :user)
+# Given("I am logged in as {string}") do |email|
+#     user = User.find_by(email: email)
+#     login_as(user, scope: :user)
+# end
+
+Given("the following user exists") do |table|
+    table.hashes.each do |user|
+      FactoryBot.create(:user, user)
+    end
+  end
+
+Given("I visit the sign_in page") do
+    visit new_user_session_path
 end
